@@ -6,8 +6,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Bootstrap Visualization Dashboard</title>
 
+        <link rel="shortcut icon" href="data:;" type="image/x-icon">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">       
-        <link rel="stylesheet" href="/style.css">
+        <link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
     </head>
     
@@ -16,16 +17,16 @@
         <nav class="navbar navbar-light" style="background-color: #374257;">
             <div class=images>
                 <nav class="navbar navbar-light bg-light">
-                    <a class="navbar-brand" href="index.html">
+                    <a class="navbar-brand" href="/">
                         
                     Home 
                     </a>
                     
-                    <a class="navbar-brand" href="purpose.html">
+                    <a class="navbar-brand" href="/purpose">
                         
                         Our purpose
                     </a>
-                    <a class="navbar-brand" href="quiz.html">
+                    <a class="navbar-brand" href="/quiz">
                         
                         Take a Quiz
                     </a>
@@ -41,7 +42,7 @@
                     <br>
                     <br>
                     <p>
-                        <form method = "POST" action="/quiz">
+                        <form method = "POST" action="/model">
                             <label style="padding: 10px; border: 2px solid rgb(40, 39, 83);" for="country">What country are you living in?</label>
                                 <select name="country" id="country">
                                 <option value="1">USA</option>
@@ -56,14 +57,14 @@
                                 </select>
                                 <br>
                                 <br>
-                                <label style="padding: 10px; border: 2px solid rgb(40, 39, 83);" for="history">Do you have any history of mental illnesses?</label>
+                                <label style="padding: 10px; border: 2px solid rgb(40, 39, 83);" for="history">Do you have any family history of mental illnesses?</label>
                                 <select name="history" id="history">
                                 <option value="1">Yes</option>
                                 <option value="0">No</option>
                                 </select>
                                 <br>
                                 <br>
-                                <label style="padding: 10px; border: 2px solid rgb(40, 39, 83);" for="remote">Is your job let you work remotely?</label>
+                                <label style="padding: 10px; border: 2px solid rgb(40, 39, 83);" for="remote">Does your job let you work remotely?</label>
                                 <select name="remote" id="remote">
                                 <option value="1">Yes</option>
                                 <option value="0">No</option>
@@ -93,11 +94,10 @@
                         
                             
                     </p>
-                    <div>
-
+                    <div class="response">
                         {% if prediction %} 
                             <div class="prediction">
-                            Recommendation for seeking treatment: {{prediction}}<br>
+                            <b>Recommendation for seeking treatment: {{prediction}}</b><br>
                             This site is meant for informational purposes only. If you feel the need for treatment, regardless of the above result, you should seek it.
                             </div>
                         {% endif %}

@@ -17,6 +17,10 @@ def purpose():
 
 @app.route("/quiz")
 def quiz():
+        return render_template("quiz.html")
+
+@app.route("/model" , methods=["POST"])
+def model():
     scaler = pickle.load(open("ML/scaler.sav", 'rb'))
     knn_model = pickle.load(open("ML/knn_model.sav", 'rb'))
 
@@ -41,13 +45,19 @@ def quiz():
         others = 1
     
     X = [[age, country, employment, history, remote, tech, female, male, others]]
+    print(country)
+
     X_scaled = scaler.transform(X)
 
     prediction = knn_model.predict(X_scaled)[0][0]
     print(prediction)
 
+    if prediction == "Y":
+        prediction = "Yes"
+    else:
+        prediction = "No"
 
-    return render_template("quiz.html", predition=prediction)
+    return render_template("quiz.html", prediction=prediction)
 
 if __name__ == "__main__":
     app.run(debug=True)

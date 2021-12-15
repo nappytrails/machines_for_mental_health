@@ -26,3 +26,9 @@ center { position: relative;
 .tableauPlaceholder {position: relative;
 top: 20%;
 left:7%}
+
+.response {
+    position: absolute;
+    top: 200px;
+    left: 600px;
+}
