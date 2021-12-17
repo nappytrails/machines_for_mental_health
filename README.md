@@ -22,10 +22,11 @@ _Mental Health in Tech Survey: Survey on Mental Health in the Tech Workplace in 
 https://www.kaggle.com/osmi/mental-health-in-tech-survey
 
 __Machine learning strategy__   
-Utilize supervised machine learning (classification) to predict who has sought treatment for a mental illness. Models to explore:
-Random forest
-K nearest neighbor
+Utilize supervised machine learning (classification) to predict who has sought treatment for a mental illness. Models to explore:   
++ Random forest
++ K nearest neighbor
 Logistic regression
+Support vector machine
 
 Division of labor
 Negin:
