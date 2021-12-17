@@ -11,7 +11,7 @@ __Project Name__
 Identifying candidates for mental health treatment using machine learning
 
 __The Issue__  
-Mental illness has a significant impact on the U.S. population and economy. According to the National Alliance on Mental Illness, one in five U.S. adults experienced mental illness in 2020, but less than half (46.2%) received treatment. Additionally, serious mental illness causes $193.2 billion in lost earnings each year in the U.S.1 Early detection of mental illness could help prevent a serious condition from developing, increase treatment rates, and reduce lost earnings.
+Mental illness has a significant impact on the U.S. population and economy. According to the National Alliance on Mental Illness, one in five U.S. adults experienced mental illness in 2020, but less than half (46.2%) received treatment. Additionally, serious mental illness causes $193.2 billion in lost earnings each year in the U.S.<sup>1</sup> Early detection of mental illness could help prevent a serious condition from developing, increase treatment rates, and reduce lost earnings.
 
 
 __Proposal__   
@@ -38,3 +38,4 @@ Erin:
 + Flask app
 + Machine learning
 
+<sup>1</sup> https://www.nami.org/mhstats
