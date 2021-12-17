@@ -25,17 +25,16 @@ __Machine learning strategy__
 Utilize supervised machine learning (classification) to predict who has sought treatment for a mental illness. Models to explore:   
 + Random forest
 + K nearest neighbor
-Logistic regression
-Support vector machine
++ Logistic regression
++ Support vector machine
 
-Division of labor
-Negin:
-ETL
-Visualizations
+__Division of labor__   
+Negin:   
++ ETL
++ Visualizations
++ HTML
 
-Erin:
-Flask app
+Erin:  
++ Flask app
++ Machine learning
 
-Collaboration:
-HTML
-Machine learning
